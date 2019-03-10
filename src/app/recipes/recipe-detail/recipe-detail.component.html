@@ -22,11 +22,11 @@
       type="button"
       class="btn btn-primary dropdown-toggle">
     Manage Recipe <span class="caret"></span>
-    </button>
+    </button>`
 <ul class="dropdown-menu">
   <li><a (click)="addToShoppingList()" style="cursor: pointer">To Shopping List</a></li>
   <li><a (click)="recipeEdit()" style="cursor: pointer">Edit Recipe</a></li>
-  <li><a style="cursor: pointer"> Delete Recipe</a></li>
+  <li><a (click)="recipeDelete()" style="cursor: pointer"> Delete Recipe</a></li>
 </ul>
     </div>
   </div>
