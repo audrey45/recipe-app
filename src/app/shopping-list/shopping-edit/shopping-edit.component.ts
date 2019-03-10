@@ -50,5 +50,10 @@ export class ShoppingEditComponent implements OnInit {
     this.editMode = false;
   }
 
+  deleteIngredients() {
+    this.shoppingListService.deleteIngredients(this.editedItemIndex);
+    this.clearForm();
+  }
+
 
 }
