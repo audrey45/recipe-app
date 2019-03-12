@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { ShoppingListService } from './shared/shopping-list.service';
 import { AppRoutingModule } from './shared/app-routing.module';
 import { RecipeService } from './shared/recipe.service';
@@ -16,14 +15,12 @@ import { RecipesModule } from './recipes/recipe.module';
 import { SharedModule } from './shared/shared.module';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { AuthModule } from './auth/auth.module';
-import { HomeComponent } from './home/home.component';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +28,8 @@ import { HomeComponent } from './home/home.component';
     ShoppingListModule,
     AuthModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
