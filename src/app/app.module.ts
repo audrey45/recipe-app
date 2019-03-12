@@ -19,6 +19,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { RecipesModule } from './recipes/recipe.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { RecipesModule } from './recipes/recipe.module';
     RecipesModule,
     HttpClientModule,
     AppRoutingModule,
+    SharedModule
  
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
