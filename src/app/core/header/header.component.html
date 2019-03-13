@@ -15,10 +15,10 @@
                         <li><a routerLink="/signin">Login</a></li>
                 </ng-template>
                 
-                <li >  <a style="cursor:pointer" (click)="logout()" *ngIf="authService.isAuthenticated()">Logout</a> </li>
+                <li >  <a style="cursor:pointer" (click)="logout()" *ngIf="isAuthenticated()">Logout</a> </li>
                 <li class="dropdown"
-                    appDropdown *ngIf="authService.isAuthenticated(); else notAuthorize">
-                    <a style="cursor: pointer" class="dropdown-toggle" role="button" *ngIf="authService.isAuthenticated()">Manage <span class="caret"></span></a>
+                    appDropdown *ngIf="isAuthenticated(); else notAuthorize">
+                    <a style="cursor: pointer" class="dropdown-toggle" role="button" *ngIf="isAuthenticated()">Manage <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a style="cursor: pointer" (click)="saveData()">Save Date</a></li>
                         <li><a style="cursor: pointer" (click)="fetchData()">Fetch Data</a></li>
